@@ -10,9 +10,29 @@
     <main>
         <header>
             <h1>Menu de navegación</h1>
+            <div id="time-message"></div> 
+            <div id="reloj-digital">
+                <div id="date"></div> 
+            </div>
         </header>
-        <div id="reloj-digital">Reloj + Fecha</div>
+        <section>
+            <div id="create-password">Crea tu contraseña segura
+                <div class="num-characteres">
+                    <p>num de carácteres</p>
+                    <input id="numCharacters" type="number" min="12" max="50">
+                </div>
+                <button id="passwordBtn">generar nueva contraseña</button>
+                <div id="print-password"></div>
+            </div>
+            <div id="favLinks">Guarda tus links favoritos
+                <input type="text" id="name-fav" placeholder="Escribe tu enlace aquí" required>
+                <input type="text" id="url-fav" placeholder="Inserta tu enlace aquí" required>
+                <button>Guardar</button>
+            </div>
+        </section>
     </main>
-    <script src="./js/script-main.js"></script>
+    <script src="./js/clock-script.js"></script>
+    <script src="js/password-generator.js"></script>
+    <script src="./js/save-fav.js"></script>
 </body>
 </html>

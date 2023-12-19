@@ -44,26 +44,167 @@ table {
 /* AQUI EMPIEZA MI CSS */
 
 body {
-    background-color: lightgrey;
+    background-image: url("../assets/background-images/sebastian-svenson-d2w-_1LJioQ-unsplash.jpeg");
+    background-size: cover;
 }
 
 main {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 50px;
+    flex-direction: column;
 }
 
-#reloj-digital {
+header {
     display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgray;
+    font-size: 20px;
+}
+
+#time-message {
+    color: lightgray;
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+#deleleteTxt {
+    height: fit-content;
+    width:fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgray;
+    font-size: 15px;
+    background-color: aqua;
+    border-style: none;
+    border-radius: 50px;
+}
+
+#deleleteTxt:hover {
+    background-color:#fbfc6c;
+    cursor: pointer;
+}
+
+/* (1)RELOJ DIGITAL */
+#reloj-digital {
+    background-color: rgba(255, 192, 203, 0.89);
+    display: flex;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     color: lightslategray;
+    justify-content: center;
     padding: 10px;
-    width: 300px;
-    height: 200px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#reloj-digital:hover {
+    background-color: #fbfc6c;
+    cursor:pointer;
 }
 
 .print-time {
     font-size: 40px;
+}
+
+/* (2) CREATE PASSWORD */
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#create-password {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgray;
+    font-size: 20px;
+    background-color: #fefe028c;
+    width: 200px;
+    height: max-content;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.num-characteres {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 15px;
+}
+
+#passwordBtn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: lightgray;
+    border-style: none; 
+    border-radius: 20px;
+    padding: 5px 10px;
+    width:max-content;
+}
+
+#passwordBtn:hover {
+    background-color: #fbfc6c;
+    cursor: pointer;
+}
+
+#print-password {
+    display: flex;
+    width:min-content;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+#numCharacters {
+    border-style: none;
+    border-radius: 5px;
+}
+
+/* // (4)SAVE FAVORITE LINKS */
+
+#favLinks {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgray;
+    font-size: 20px;
+    background-color:#00ffee8c;
+    width: 200px;
+    height: max-content;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#favLinks input {
+    background-color:white;
+    border-style: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: darkgrey;
+}
+
+#favLinks button {
+    background-color:white;
+    border-style: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: darkgrey;
+}
+
+#favLinks button:hover {
+    background-color: aqua;
+    cursor: pointer;
 }
