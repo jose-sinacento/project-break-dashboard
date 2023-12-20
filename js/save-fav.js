@@ -1,36 +1,47 @@
+// A PARTIR DE AQUI EMPIEZA EL CODIGO 
+const saveBtn = document.getElementById('saveBtn');
+const olElement = document.querySelector('#pintar-links ol');
+const nameFav = document.getElementById('name-fav').value;
+const urlFav = document.getElementById('url-fav').value;
+let parsedLinks = [];
 
+// TODO: comprobar si hay datos en localstorage y pintarlos (funcion)
 
-// PRACTICA LOCALSTORAGE 
-function guardar_localStorage() {
-    
-    let persona = {
-        nombre: "Jose",
-        edad: 36,
-        email: "334435@343.com",
-        address: "skhfds"
+document.addEventListener('DOMContentLoaded', () => {
+    const storedLinks = localStorage.getItem("favLink");
+    if (storedLinks) {
+        parsedLinks = JSON.parse(storedLinks);
+        parsedLinks.forEach(favLink => {
+            olElement.innerHTML += `<li><a href="${favLink.url}" target="_blank">${favLink.nombre}</a></li>`;
+        });
     }
+})
 
-    let nombre = "Juan";
-
-    localStorage.setItem("nombre", JSON.stringify(persona))
-    localStorage.setItem("nombre2", nombre);
+//Evento boton guardar
+saveBtn.addEventListener('click', () => {
+    const nameFav = document.getElementById('name-fav').value;
+    const urlFav = document.getElementById('url-fav').value;
+    addLink(nameFav, urlFav);
+    saveLinkInLocalStorage();
+});
+//Funcion pintar nombre+enlace
+const addLink = (nombreEnlace, URLDelEnlace) => {
+    olElement.innerHTML += `<li><a href="${URLDelEnlace}" target="_blank">${nombreEnlace}</a></li>`;
 };
 
-guardar_localStorage();
-
-// CON ESTA FUNCION PUEDO PINTAR LO QUE ESTA GUARDADO SI HAY ALGO EN LOCAL STORAGE
-function obtener_localStorage() {
-
-    if (localStorage) {
-        console.log('Si hay informacion')
-        let nombre = JSON.parse(localStorage.getItem("nombre"));
-        let nombre2 = localStorage.getItem("nombre2");
-        console.log(nombre);
-        console.log(nombre2);
-    } else {
-        console.log("no hay nada en localStorage");
+//Funcion guardar y recuperar del LocalStorage
+function saveLinkInLocalStorage() {
+    const nameFav = document.getElementById('name-fav').value;
+    const urlFav = document.getElementById('url-fav').value;
+    let storedLinks = localStorage.getItem("favLink")
+    let arrFavLinkObj = []
+    if (storedLinks) {
+        arrFavLinkObj = JSON.parse(storedLinks);
     }
-
+    const favLinkObj = {
+        nombre:nameFav,
+        url:urlFav,
+    }
+    arrFavLinkObj.push(favLinkObj)
+    localStorage.setItem('favLink', JSON.stringify(arrFavLinkObj));
 }
-
-obtener_localStorage();

@@ -21,21 +21,3 @@ passwordBtn.addEventListener('click', passwoordGenerator)
 //TODO: (1) Validar min 12 y max 50 caracteres 
 //TODO: (2) La contrasena debe tener 1 caracter de cada tipo. 
  
-
-///////
-
-function guardar_localStorage() {
-    
-    let persona = {
-        nombre: "Jose",
-        edad: 36,
-        email: "334435@343.com",
-        address: "skhfds"
-    }
-
-    let nombre = "Juan";
-
-    localStorage.setItem("nombre", JSON.stringify(persona)) 
-};
-
-guardar_localStorage();

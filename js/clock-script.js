@@ -2,6 +2,7 @@ const digitalWatch = document.getElementById('reloj-digital');
 const timeMessage = document.getElementById('time-message');
 const deleleteTxt = document.getElementById('deleleteTxt');
 // TODO:Anadir funcion para borrar los mensajes. 
+//TODO: corregir los mensajes de cada hora. 
 //(2)PRINT DATE AND TIME
 
 function updateDateTime() {
@@ -51,6 +52,11 @@ if (hours == 12 && hours <14) {
 
 if (hours == 15 && hours < 17) {
     timeMessage.innerHTML = `<p>Es hora del café</p>
+    <button id="deleleteTxt">Borrar</button>`
+}
+
+if (hours ==22 && hours<24) {
+    timeMessage.innerHTML = `<p>Si te acuestas ahora, dormirás 8 horas</p>
     <button id="deleleteTxt">Borrar</button>`
 }
 else {
