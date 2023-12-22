@@ -343,7 +343,7 @@ section {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-dddd
+
 
 ol button {
     display: flex;
@@ -357,4 +357,34 @@ ol button {
     font-size: 10px;
     padding-bottom: 2px;
     color: white;
+}
+/* INDEX RELOJ */
+/* INDEX SAVE-FAV */
+/* INDEX PASSWORD */
+/* INDEX WEATHER */
+
+.main-password {
+    display: flex;
+    padding: 50px;
+
+}
+.header-password {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+.main-password {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+}
+
+.home img {
+    height: 30px;
+    width: 30px;
 }

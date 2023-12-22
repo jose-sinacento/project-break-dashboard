@@ -67,15 +67,3 @@ else {
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
-
-// deleleteTxt.addEventListener('click', function () {
-//     if (deleleteTxt) {
-//         timeMessage.innerHTML = "";
-//     }
-// });
-
-//(3)CREATE PASSWORD 
-
-// (4)SAVE FAVORITE LINKS
-
-// (5)WEATHER
