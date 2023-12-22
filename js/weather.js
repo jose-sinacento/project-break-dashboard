@@ -17,7 +17,9 @@ let weather = {
         document.querySelector(".temp").innerHTML=`Temperatura ${temp_c}°C`;
         document.querySelector(".humedad").innerHTML=`Humedad ${humidity} %`;
         document.querySelector(".wind").innerHTML=`Viento ${wind_mph} mph`;
+        document.querySelector(".weather").classList.remove("loading");
        },
+
        search: function() {
         this.fetchWeather(document.querySelector("#search-bar").value)
        }
