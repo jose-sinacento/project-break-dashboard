@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelector('.deleteLink').addEventListener('click', function() {
+    // document.querySelector('.deleteLink').addEventListener('click', function() {
         
-    })
+    // })
     
     function deleteEachLink() {
         const deleteEachLink = document.querySelector(".deleteLink");
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 saveBtn.addEventListener('click', () => {
     const nameFav = document.getElementById('name-fav').value;
     const urlFav = document.getElementById('url-fav').value;
-    let storedLinks = JSON.parse(localStorage.getItem("favLink"));
+    let storedLinks = JSON.parse(localStorage.getItem("favLink")) || [];
     addLink(nameFav, urlFav, storedLinks.length);
     saveLinkInLocalStorage();
 });
