@@ -53,13 +53,13 @@ main {
     flex-wrap: wrap;
     padding: 50px;
     flex-direction: column;
+    max-height: ;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-
 }
 
 h1 {
@@ -91,6 +91,84 @@ h1 {
     cursor: pointer;
 }
 
+.clock-weather-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+/* (5) WEATHER CONTAINER */
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #213445;
+    width: 200px;
+    background-color: rgb(250, 235, 215);
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    gap: 10px;
+}
+.weather-container h2 {
+    font-size: 30px;
+}
+.search-box input, button {
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.search-box input {
+   width: fit-content;
+}
+
+.search-box button {
+    border-radius: 20px;
+ }
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-temp {
+    height: 50px;
+    width: 50px;
+}
+
+.temp {
+    font-size: 25px;
+}
+
+.icon-description-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading::after {
+    visibility: hidden;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+}
+
 /* (1)RELOJ DIGITAL */
 #reloj-digital {
     background-color: rgba(255, 192, 203, 0.89);
@@ -105,6 +183,7 @@ h1 {
     height: 150px;
     border-radius: 150px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 36px;
 }
 
 #reloj-digital:hover {
@@ -122,6 +201,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: absolute;
+    top: 130px;
 }
 #create-password {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -154,11 +235,14 @@ section {
     border-radius: 20px;
     padding: 5px 20px;
     width:max-content;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    outline: none;
 }
 
 #passwordBtn:hover {
     background-color: #fbfc6c;
     cursor: pointer;
+
 }
 
 #print-password {
@@ -172,6 +256,10 @@ section {
     border-style: none;
     border-radius: 5px;
     background-color: lightgray;
+}
+#numCharacters:hover {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    outline: none;
 }
 
 /* // (4)SAVE FAVORITE LINKS */
@@ -198,6 +286,11 @@ section {
     color: darkgrey;
 }
 
+#favLinks input:hover {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    outline: none;
+}
+
 #favLinks button {
     background-color:lightgray;
     border-style: none;
@@ -209,7 +302,11 @@ section {
 #favLinks button:hover {
     background-color: aqua;
     cursor: pointer;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    outline: none;
 }
+
+
 
 #pintar-links {
     background-color: #213445;
@@ -226,8 +323,27 @@ section {
     gap: 10px;
     flex-wrap: wrap;
 }
-
+#pintar-links li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2px;
+}
 #pintar-links li a {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ol button {
+    display: flex;
+    justify-content: center;
+    background-color: #213445;
+    border-style: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    align-items: center;
+    font-size: 10px;
+    padding-bottom: 2px;
+    color: white;
 }
