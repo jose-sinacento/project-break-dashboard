@@ -1,0 +1,8 @@
+La entrega se realizó correctamente.
+Curso: 03_Project_Break_1_FS_23-10, 03 Project Break 1 - Full Stack
+Evaluación: Project Break 1 - Dashboard
+
+Fecha de entrega: 22/12/23 16:18
+Tamaño de entrega: undefined
+Remitente: José Ruiz-Herrera Hernández
+Número de confirmación: ce7a28bbf1944639b8143816c3323cb1
